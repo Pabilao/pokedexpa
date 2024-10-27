@@ -1,7 +1,65 @@
-.image{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%; /* Adjust the width as needed */
-  height: 75%
+body {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 150px;  /* Tamaño reducido */
+  height: 150px; /* Tamaño reducido */
+  border: 3px solid #ffcb05; /* Bordes más delgados */
+  border-radius: 8px;
+  background-color: #333;
+}
+
+button {
+  background-color: #ffcb05;
+  color: #222;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;  /* Tamaño de fuente reducido */
+  padding: 8px;       /* Padding reducido */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;        /* Ancho reducido */
+  height: 40px;       /* Altura reducida */
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Botón izquierdo */
+button:first-of-type {
+  left: -50px; /* Ajustado para un poco más cerca de la imagen */
+}
+
+button:last-of-type {
+  right: -50px; /* Ajustado para un poco más cerca de la imagen */
+}
+
+button:hover {
+  background-color: #e0a500;
+  transform: scale(1.1) translateY(-50%);
+}
+
+/* Flechas */
+button:first-of-type::before {
+  content: '◀';
+}
+
+button:last-of-type::before {
+  content: '▶';
 }

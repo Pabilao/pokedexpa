@@ -8,11 +8,9 @@
     <div class="stat">
         <h2>Vida</h2>
         <div class="health-container">
-            <span class="health" *ngIf="vidaPokemon > 0">❤️</span>
-            <span class="health" *ngIf="vidaPokemon >= 20">❤️</span>
-            <span class="health" *ngIf="vidaPokemon >= 40">❤️</span>
-            <span class="health" *ngIf="vidaPokemon >= 80">❤️</span>
-            <span class="health" *ngIf="vidaPokemon == 100">❤️</span>
+            <div class="health-bar" [style.width.%]="vidaPokemon" [ngClass]="{'low-health': vidaPokemon < 30}">
+                <span>{{ vidaPokemon }}%</span>
+            </div>
         </div>
     </div>
 

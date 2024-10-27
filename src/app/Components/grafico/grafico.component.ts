@@ -1,15 +1,15 @@
-import { NgIf } from '@angular/common';
+import { NgIf, NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grafico',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, NgClass],
   templateUrl: './grafico.component.html',
   styleUrl: './grafico.component.css'
 })
 export class GraficoComponent {
-  @Input() vidaPokemon: number = 100;
+  @Input() vidaPokemon: number = 284;
   @Input() defensaPokemon: number = 100;
   @Input() ataquePokemon: number = 100;
   @Input() idPokemon: string = "#001";

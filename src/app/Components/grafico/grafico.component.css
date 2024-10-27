@@ -1,6 +1,6 @@
-/* Fuente */
 * {
     font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem; /* Tamaño de fuente ligeramente aumentado */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,48 +16,57 @@ body {
 
 .stats {
     background-color: #333;
-    border: 4px solid #ffcb05;
-    border-radius: 8px;
-    padding: 20px;
+    border: 2px solid #ffcb05;
+    border-radius: 4px;
+    padding: 8px 12px; /* Padding un poco mayor */
     color: #fff;
-    width: 100%;
+    width: 100%; 
     text-align: left;
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 0.5rem; /* Tamaño de fuente ligeramente aumentado */
     color: #ffcb05;
-    margin-bottom: 10px;
+    margin-bottom: 6px; /* Espacio inferior un poco mayor */
 }
 
 .stat {
-    margin: 15px 0;
+    margin: 6px 0; /* Espacio entre stats ligeramente mayor */
 }
 
 .health-container, .shield-container, .attack-container {
     display: flex;
     justify-content: flex-start;
-    gap: 5px;
+    gap: 2px; /* Espacio entre elementos un poco mayor */
+    align-items: center;
 }
 
 .health, .shield, .attack {
-    font-size: 1.5rem;
+    font-size: 0.75rem; /* Tamaño de íconos ligeramente mayor */
     transition: transform 0.2s;
 }
 
 .health:hover, .shield:hover, .attack:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
-/* Colores específicos para cada stat */
-.health {
-    color: #e63946;
+.health-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+    height: 14px; /* Altura de la barra ligeramente aumentada */
 }
 
-.shield {
-    color: #0077b6;
+.health-bar {
+    height: 100%; 
+    background-color: #76c7c0;
+    text-align: center;
+    color: white;
+    transition: width 0.5s;
+    line-height: 13px; /* Alineación centrada del texto */
 }
 
-.attack {
-    color: #fb8500;
+.low-health {
+    background-color: #ff4c4c;
 }
