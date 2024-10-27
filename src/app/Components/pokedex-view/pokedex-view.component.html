@@ -1,0 +1,14 @@
+
+<div class="container">
+  <span class="title">POKEDEX</span>
+  <div class="pokedex">
+    <app-pokedex [imageUrl]=pokemonImage (pokemonID)="changePokemon($event)"></app-pokedex>
+    <div class="point-container">
+      <span class="point"></span>
+      <span class="point"></span>
+    </div>
+  </div>
+  <div class="grafico">
+    <app-grafico></app-grafico>
+  </div>
+</div>
