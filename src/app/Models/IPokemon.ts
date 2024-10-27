@@ -73,7 +73,7 @@ export class PokemonModel{
     
     calcularDaño(pokemonAtacante:PokemonModel):number{
         if(pokemonAtacante.getAtaque()>this.defensa){
-            return pokemonAtacante.getAtaque-this.getDefensa;
+            return pokemonAtacante.getAtaque() - this.getDefensa();
         }
         else{
             return 0;

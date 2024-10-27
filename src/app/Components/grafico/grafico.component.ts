@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grafico',
@@ -9,10 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './grafico.component.css'
 })
 export class GraficoComponent {
-  vidaPokemon:number=100;
-  defensaPokemon:number=100;
-  ataquePokemon:number=100;
-  idPokemon:string="#007";
-  nombrePokemon: string="Charizard";
-  tipoPokemon: string="Fuego";
+  @Input() vidaPokemon: number = 100;
+  @Input() defensaPokemon: number = 100;
+  @Input() ataquePokemon: number = 100;
+  @Input() idPokemon: string = "#001";
+  @Input() nombrePokemon: string = "Pokemon";
+  @Input() tipoPokemon: string = "Normal";
+
+  capitalizeFirstLetter(string: string): string {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+  }
 }

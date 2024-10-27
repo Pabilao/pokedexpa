@@ -1,69 +1,63 @@
-.stats {
-    background: linear-gradient(145deg, #ff6f61, #f39c12); /* Gradiente inspirado en fuego */
-    border-radius: 12px; /* Bordes más redondeados */
-    padding: 15px; /* Más espacio interno */
-    text-align: center; /* Centra el texto */
-    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.4), 
-                0 0 15px rgba(255, 165, 0, 0.5); /* Sombras más dramáticas */
-    width: 80%;
-    margin: 15px auto; /* Más espacio alrededor */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+/* Fuente */
+* {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.stats:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-    box-shadow: 0 6px 25px rgba(255, 87, 51, 0.6), 
-                0 0 20px rgba(255, 165, 0, 0.7); /* Sombra más intensa */
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.stats {
+    background-color: #333;
+    border: 4px solid #ffcb05;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    text-align: left;
 }
 
 h2 {
-    font-family: 'Press Start 2P', cursive;
-    color: #fff; /* Texto blanco para mayor contraste */
-    margin: 8px 0; /* Más espacio entre título y contenido */
-    font-size: 0.8em; /* Tamaño de fuente más grande */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil para el texto */
+    font-size: 1rem;
+    color: #ffcb05;
+    margin-bottom: 10px;
 }
 
-.health,
-.shield,
+.stat {
+    margin: 15px 0;
+}
+
+.health-container, .shield-container, .attack-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.health, .shield, .attack {
+    font-size: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.health:hover, .shield:hover, .attack:hover {
+    transform: scale(1.2);
+}
+
+/* Colores específicos para cada stat */
+.health {
+    color: #e63946;
+}
+
+.shield {
+    color: #0077b6;
+}
+
 .attack {
-    display: inline-block;
-    width: 15px; /* Íconos más grandes */
-    height: 15px;
-    margin: 0 4px; /* Más espacio entre íconos */
-    border-radius: 50%; /* Bordes redondeados para íconos */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave en hover */
-}
-
-.health:hover,
-.shield:hover,
-.attack:hover {
-    transform: scale(1.4); /* Aumento más significativo */
-    box-shadow: 0 0 8px rgba(255, 87, 51, 0.7); /* Efecto de brillo al hacer hover */
-}
-
-.health:nth-of-type(1) {
-    background: radial-gradient(circle, #e74c3c 0%, #ff6f61 70%); /* Rojo fuego */
-}
-
-.health:nth-of-type(2) {
-    background: radial-gradient(circle, #f39c12 0%, #f1c40f 70%); /* Naranja vibrante */
-}
-
-.health:nth-of-type(3) {
-    background: radial-gradient(circle, #f1c40f 0%, #f39c12 70%); /* Amarillo ardiente */
-}
-
-.health:nth-of-type(4) {
-    background: radial-gradient(circle, #2ecc71 0%, #27ae60 70%); /* Verde claro */
-}
-
-.health:nth-of-type(5) {
-    background: radial-gradient(circle, #27ae60 0%, #2ecc71 70%); /* Verde oscuro */
-}
-
-.shield, .attack {
-    background-color: rgba(255, 255, 255, 0.8); /* Blanco translúcido para más claridad */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra leve */
+    color: #fb8500;
 }
