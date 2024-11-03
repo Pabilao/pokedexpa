@@ -14,10 +14,12 @@
   </div>
   <div class="grafico">
     <app-grafico 
-      [nombrePokemon]="pokemonName"
-      [idPokemon]="'#' + pokemonID.toString().padStart(3, '0')"
-      [tipoPokemon]="pokemonType"
-      [vidaPokemon]="pokemonHP">
-    </app-grafico>
+    [nombrePokemon]="pokemonName"
+    [idPokemon]="'#' + pokemonID.toString().padStart(3, '0')"
+    [tipoPokemon]="pokemonType"
+    [vidaPokemon]="pokemonHP"
+    [ataquePokemon]="pokemonAttack"
+    [defensaPokemon]="pokemonDefense">
+</app-grafico>
   </div>
 </div>

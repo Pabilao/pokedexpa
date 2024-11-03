@@ -5,34 +5,36 @@
     <h2>ID: {{ idPokemon }}</h2>
     <h2>Tipo: {{ capitalizeFirstLetter(tipoPokemon) }}</h2>
     
-    <div class="stat">
+    <div class="stat" (click)="toggleDisplay2('hp')">
         <h2>Vida</h2>
-        <div class="health-container">
-            <div class="health-bar" [style.width.%]="vidaPokemon" [ngClass]="{'low-health': vidaPokemon < 30}">
-                <span>{{ vidaPokemon }}%</span>
+        <div class="stat-container">
+            <div class="stat-bar" [style.width.%]="100">
+                <div class="stat-value" [style.width.%]="100">
+                    <span *ngIf="vidaPokemon > 1">{{ showPercentage.hp ? calculateVida(vidaPokemon) + '%' : vidaPokemon }}</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="stat">
-        <h2>Escudo</h2>
-        <div class="shield-container">
-            <span class="shield" *ngIf="defensaPokemon > 0">🛡️</span>
-            <span class="shield" *ngIf="defensaPokemon >= 20">🛡️</span>
-            <span class="shield" *ngIf="defensaPokemon >= 40">🛡️</span>
-            <span class="shield" *ngIf="defensaPokemon >= 80">🛡️</span>
-            <span class="shield" *ngIf="defensaPokemon == 100">🛡️</span>
+    <div class="stat" (click)="toggleDisplay('attack')" >
+        <h2>Ataque</h2>
+        <div class="stat-container">
+            <div class="stat-bar" [style.width.%]="100">
+                <div class="stat-value attack-bar" [style.width.%]="calculatePercentage(ataquePokemon, 190)">
+                    <span *ngIf="ataquePokemon > 1">{{ showPercentage.attack ? calculatePercentage(ataquePokemon, 190) + '%' : ataquePokemon }}</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="stat">
-        <h2>Ataque</h2>
-        <div class="attack-container">
-            <span class="attack" *ngIf="ataquePokemon > 0">⚔️</span>
-            <span class="attack" *ngIf="ataquePokemon >= 20">⚔️</span>
-            <span class="attack" *ngIf="ataquePokemon >= 40">⚔️</span>
-            <span class="attack" *ngIf="ataquePokemon >= 80">⚔️</span>
-            <span class="attack" *ngIf="ataquePokemon == 100">⚔️</span>
+    <div class="stat" (click)="toggleDisplay('defense')">
+        <h2>Defensa</h2>
+        <div class="stat-container">
+            <div class="stat-bar" [style.width.%]="100">
+                <div class="stat-value defense-bar" [style.width.%]="calculatePercentage(defensaPokemon, 230)">
+                    <span *ngIf="defensaPokemon > 1">{{ showPercentage.defense ? calculatePercentage(defensaPokemon, 230) + '%' : defensaPokemon }}</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
