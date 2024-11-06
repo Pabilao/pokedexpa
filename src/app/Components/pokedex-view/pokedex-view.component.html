@@ -1,25 +1,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  <div class="container">
+<div class="container">
   <span class="title">POKEDEX</span>
   <div class="pokedex">
     <app-pokedex 
       [imageUrl]="pokemonImage" 
-      (pokemonID)="changePokemon($event)">
+      (pokemonID)="changePokemon($event)"
+      (evolveID)="handleEvolution($event)">
     </app-pokedex>
-    <br>
-    <div class="point-container">
-      <span class="point"></span>
-      <span class="point"></span>
-    </div>
   </div>
   <div class="grafico">
     <app-grafico 
-    [nombrePokemon]="pokemonName"
-    [idPokemon]="'#' + pokemonID.toString().padStart(3, '0')"
-    [tipoPokemon]="pokemonType"
-    [vidaPokemon]="pokemonHP"
-    [ataquePokemon]="pokemonAttack"
-    [defensaPokemon]="pokemonDefense">
-</app-grafico>
+      [nombrePokemon]="pokemonName"
+      [idPokemon]="'#' + pokemonID.toString().padStart(3, '0')"
+      [tipoPokemon]="pokemonType"
+      [vidaPokemon]="pokemonHP"
+      [ataquePokemon]="pokemonAttack"
+      [defensaPokemon]="pokemonDefense">
+    </app-grafico>
   </div>
 </div>

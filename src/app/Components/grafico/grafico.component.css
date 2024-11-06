@@ -1,6 +1,6 @@
 * {
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.6rem; /* Tamaño de fuente ligeramente aumentado */
+    font-size: 0.4rem; /* Tamaño de fuente ligeramente aumentado */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -81,7 +81,7 @@ h2 {
 }
 
 .stat-bar {
-    height: 25px;
+    height: 12px;
     background-color: #666;
     position: relative;
 }

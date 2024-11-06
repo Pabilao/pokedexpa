@@ -77,8 +77,6 @@
   width: 100%;
   height: 50%;
   background-color: rgba(33, 33, 33, 0.9); /* Contraste oscuro */
-  /* Efecto de esquina recortada */
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%); /* Esquinas ajustadas en la parte superior derecha */
   padding: 10px 10px;
   box-shadow: inset 0px 4px 10px rgba(255, 87, 51, 0.4);
   overflow-y: auto;

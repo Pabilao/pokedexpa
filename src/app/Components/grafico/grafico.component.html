@@ -9,7 +9,7 @@
         <h2>Vida</h2>
         <div class="stat-container">
             <div class="stat-bar" [style.width.%]="100">
-                <div class="stat-value" [style.width.%]="100">
+                <div class="stat-value" [style.width.%]="100" *ngIf="vidaPokemon > 1">
                     <span *ngIf="vidaPokemon > 1">{{ showPercentage.hp ? calculateVida(vidaPokemon) + '%' : vidaPokemon }}</span>
                 </div>
             </div>

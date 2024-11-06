@@ -1,5 +1,10 @@
 <div class="container">
-    <button (click)="previousPokemon()"></button>
-    <img [src]="imageUrl" class="image">
-    <button (click)="nextPokemon()"></button>
-</div>
+    <button class="navigation-button" (click)="previousPokemon()"></button>
+    <div class="evolution-container">
+      <button class="evolution-button up" (click)="evolvePokemon(1)">▲</button>
+      <img [src]="imageUrl" class="image">
+      <button class="evolution-button down" (click)="evolvePokemon(-1)">▼</button>
+    </div>
+    <button class="navigation-button" (click)="nextPokemon()"></button>
+  </div>
+  

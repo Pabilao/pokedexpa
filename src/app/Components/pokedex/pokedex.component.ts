@@ -1,6 +1,5 @@
-import { Component} from '@angular/core';
-import { Input, EventEmitter } from '@angular/core';
-import { Output } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'app-pokedex',
   standalone: true,
@@ -9,18 +8,19 @@ import { Output } from '@angular/core';
   styleUrl: './pokedex.component.css'
 })
 export class PokedexComponent {
-  @Input({required:true})imageUrl:string="";
-  @Output() pokemonID:EventEmitter<number>=new EventEmitter;
+  @Input() imageUrl: string = "";
+  @Output() pokemonID = new EventEmitter<number>();
+  @Output() evolveID = new EventEmitter<number>();
 
-  previousPokemon(){
-    
+  previousPokemon() {
     this.pokemonID.emit(-1);
-    
-  }
-  nextPokemon(){
-    this.pokemonID.emit(+1);
-    
   }
 
-  
+  nextPokemon() {
+    this.pokemonID.emit(1);
+  }
+
+  evolvePokemon(direction: number) {
+    this.evolveID.emit(direction);
+  }
 }
