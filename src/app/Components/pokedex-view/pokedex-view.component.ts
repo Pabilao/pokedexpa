@@ -49,7 +49,7 @@ export class PokedexViewComponent {
     const chainId = parseInt(chain.species.url.split('/').slice(-2, -1)[0]);
     
     // Si encontramos el Pokémon actual
-    if (chainId === currentId) {
+    if (chainId == currentId) {
       // Para evolución hacia arriba
       if (direction > 0 && chain.evolves_to.length > 0) {
         return parseInt(chain.evolves_to[0].species.url.split('/').slice(-2, -1)[0]);

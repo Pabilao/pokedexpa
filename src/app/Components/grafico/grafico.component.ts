@@ -33,7 +33,7 @@ export class GraficoComponent {
   }
   calculatePercentage(value: number, max: number): number {
     if (max == 0) { 
-      return 0; // Avoid division by zero if max is 0
+      return 0; 
     } else {
     return parseFloat(((value / max) * 100).toFixed(1)); 
     }

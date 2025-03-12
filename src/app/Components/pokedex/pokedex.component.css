@@ -12,19 +12,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;           /* Espacio horizontal entre flechas e imagen */
+  padding: 20px 20px; /* Menor padding vertical que la versión anterior */
+  min-height: 48vh;   /* Un poquito menos alto que 50vh */
 }
 
 .evolution-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;          /* Espacio vertical entre flechas e imagen */
 }
 
 .image {
-  width: 150px;
-  height: 150px;
+  width: 210px;  /* Imagen ligeramente más pequeña */
+  height: 210px;
   border: 3px solid #ffcb05;
   border-radius: 8px;
   background-color: #333;
@@ -35,32 +37,37 @@ button {
   color: #222;
   border: none;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.8rem;
-  padding: 8px;
+  font-size: 1rem;
+  padding: 12px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
 }
 
+button:hover {
+  background-color: #e0a500;
+}
+
+/* Flechas izquierda y derecha */
 .navigation-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .navigation-button:first-of-type {
-  left: -50px;
+  left: -45px;
 }
 
 .navigation-button:last-of-type {
-  right: -50px;
+  right: -45px;
 }
 
 .navigation-button:hover {
@@ -68,17 +75,15 @@ button {
   transform: scale(1.1) translateY(-50%);
 }
 
+/* Flechas arriba y abajo */
 .evolution-button {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 14px;
 }
 
-button:hover {
-  background-color: #e0a500;
-}
-
+/* Iconos de flechas */
 .navigation-button:first-of-type::before {
   content: '◀';
 }
